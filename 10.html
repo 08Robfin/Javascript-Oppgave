@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mynt eller Kron</title>
+</head>
+<body>
+    <h1>Mynt eller Kron</h1>
+    <h2>Trykk CTRL + R eller F5 for å flippe på nytt</h2>
+    <img id="coin" src="" alt="Bilde">
+</body>
+<script>
+    let bilde = document.getElementById("coin");
+
+    let tall = Math.random();
+
+    if (tall < 0.5) {
+        bilde.src = "Images/Kron.png";
+    } else {
+        bilde.src = "Images/Mynt.png";
+    }
+</script>
+</html>
