@@ -1,3 +1,108 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quiz om Grey's Anatmoy</h1>
+
+    <!--Spørsmål 1-->
+    <h3>Hvem spiller rollen Meredeith Grey?</h3>
+    <button onclick="Riktig(this)">
+        Ellen Pompeo
+    </button>
+    <button onclick="Feil(this)">
+        Ellen DeGeneres
+    </button>
+<br>
+<br>
+<br>
+    <!--Spørsmål 2-->
+   <h3>Hvem er hovedkarakteren?</h3>
+    <button onclick="Feil(this)">
+        Miranda Bailey
+    </button>
+    <button onclick="Riktig(this)">
+        Meredith Grey
+    </button>
+<br>
+<br>
+<br>
+        <!--Spørsmål 3-->
+    <h3>I hvilke land er Grey's Anatomy basert?</h3>
+    <button onclick="Riktig(this)">
+        USA
+    </button>
+    <button onclick="Feil(this)">
+        Australia
+    </button>
+<br>
+<br>
+<br>
+        <!--Spørsmål 4-->
+    <h3>Hva heter sykehuset i Grey's Anatomy</h3>
+    <button onclick="Feil(this)">
+        Sacred Heart Hospital
+    </button>
+    <button onclick="Riktig(this)">
+        Seattle Grace Hospital
+    </button>
+<br>
+<br>
+<br>
+        <!--Spørsmål 5-->
+        <h3>Hvem er Cheif of Surgery i starten av serien?</h3>
+    <button onclick="Feil(this)">
+        Alex Karev
+    </button>
+    <button onclick="Riktig(this)">
+        Richard Webber
+    </button>
+<br>
+<br>
+<br>
+        <!--Slutt-->
+        <h3>Er du ferdig?</h3>
+    <button onclick="Ferdig()" class="Ferdig">
+        Ferdig!
+    </button>
+</body>
+</html>
+
+<style>
+    button{
+        border-radius: 10px;
+    }
+    .Ferdig{
+        background-color: yellow;
+    }
+    .clicked{
+        background-color: greenyellow;
+    }
+    .clickedfeil{
+        background-color: red;
+    }
     
+</style>
+
+<script>
+    let score = 0
+    function Riktig(btn) {
+        if (btn.classList.contains("clicked")){
+
+        } else {
+            score++;
+            score++;
+            btn.classList.add("clicked");
+        }
+    }
+    function Feil(btn) {
+        btn.classList.add("clickedfeil");
+    }
+    function Ferdig() {
+        alert("Du fikk "+score+" Poeng!")
+        location.reload();
+    }
 </script>
